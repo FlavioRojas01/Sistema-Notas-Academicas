@@ -18,8 +18,13 @@ function Notas() {
   const [notaEditar, setNotaEditar] =
     useState<Nota | null>(null);
 
-  const [promedioGeneral] =
-    useState(15.8);
+  const promedioGeneral =
+    notas.length > 0
+      ? notas.reduce(
+          (sum, nota) => sum + nota.nota,
+          0
+        ) / notas.length
+      : 0;
 
   const [datosGrafico,
     setDatosGrafico] = useState([]);
