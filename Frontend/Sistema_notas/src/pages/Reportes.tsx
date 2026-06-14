@@ -288,7 +288,7 @@ function Reportes() {
                 font-bold
               "
               >
-                {reporte.promedioGeneral.toFixed(2)}
+                {(reporte.promedioGeneral ?? 0).toFixed(2)}
               </h2>
 
             </div>
